@@ -16,12 +16,15 @@ body {
     font-size: 1.5vw;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 15;
     align-items: center;
 }
 
 .offer i {
     margin-left: 10%;
     cursor: pointer;
+    color: white;
 }
 
 .navbar {
@@ -69,6 +72,12 @@ body {
 .navbar i {
     display: none;
     font-size: 22px;
+    cursor: pointer;
+}
+
+/* navbar 2 */
+.sidenav {
+    display: none;
 }
 
 /* slider */
@@ -104,13 +113,15 @@ body {
 }
 
 .slider .content h5 {
-    font-size: 1vw;
+    font-size: 1.8vw;
 }
 
 .slider .content button {
     font-size: 16px;
     padding: 10px 15px;
     margin-top: 10px;
+    color: black;
+    border: 1px solid black;
 }
 
 /* brands */
@@ -532,24 +543,92 @@ footer .footer__contents .social-media-icons i {
         display: none;
     }
 
+    /* navbar 2 */
+    .sidenav{
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        width: 40%;
+        background-color: rgb(29, 35, 44);
+        top: 0;
+        left:  -40%;
+        z-index: 12;
+        height: 100vh;
+        transition: all 1s;
+    }
+    .sidenav ul {
+        margin-top: 50px;
+        position: relative;
+    }
+    .sidenav ul li {
+        list-style: none;
+        padding: 20px;
+    }
+    .sidenav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .sidenav i {
+        margin-left: 10%;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        margin-top: 10px;
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+    .sidenav li a:hover {
+        text-decoration: underline;
+    }
+
     .navbar i {
         display: block;
+        
     }
 
     .navbar h2 {
         font-size: 35px;
     }
 
+    .slider .content button {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .slider .content h5 {
+        font-size: 2.5vw;
+    }
+ 
     .brand__img img {
         width: 45px;
     }
+    .brand__images p {
+        font-size: 20px;
+    }
+    .service__description {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .service__description h1 {
+        font-size: 3.5vw;
+    
+    }
+    
+    .service__description p {
+        font-size: 2.2vw;
+    }
+  
 
     .service__boxes .box h4 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .service__boxes .box p {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .service__boxes .box i {
@@ -573,6 +652,7 @@ footer .footer__contents .social-media-icons i {
     .collection {
         gap: 10px;
     }
+
     .collection .shirt__images-1,
     .collection .shirt__images-2,
     .collection .shirt__images-3 {
@@ -587,6 +667,19 @@ footer .footer__contents .social-media-icons i {
 
 /* mobile */
 @media only screen and (max-width: 480px) {
+    .offer p,
+    .offer i {
+        font-size: 10px;
+    }
+    .sidenav ul li a {
+        font-size: 16px;
+    }
+    .slider .content button {
+        font-size: 12px;
+        padding: 6px 5px;
+        margin-top: 10px;
+    }
+
     .brand {
         margin-top: -30px;
         margin-bottom: -30px;
@@ -602,19 +695,38 @@ footer .footer__contents .social-media-icons i {
     }
 
     .service__description h1 {
-        font-size: 2.8vw;
+        font-size: 3.8vw;
+    }
+    .service__description p {
+        font-size: 2.6vw;
     }
 
     .service__boxes .box h4 {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .service__boxes .box p {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .service__boxes .box i {
         font-size: 16px;
+    }
+    .arrivals__container button {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-size: 1.8vw;
+        border: 1px solid transparent;
+        border-radius: 5px;
+ 
+    }
+    .image__container .image__boxes i {
+        position: absolute;
+        bottom: 15px;
+        right: 20px;
+        font-size: 3vw;
     }
 
     .bottom-banner .bottom-banner__content {
@@ -630,12 +742,26 @@ footer .footer__contents .social-media-icons i {
     .newsletter {
         margin: -20px 0px;
     }
-    
+    .newsletter__content button {
+        font-size: 15px;
+    }
+    footer .footer__contents h2 {
+        font-size: 5vw;
+        padding-bottom: 5px;
+    }
+    footer .footer__contents p {
+        font-size: 2.2vw;
+        padding-bottom: 10px;
+    }
+
+
+
     /* collection section 2  */
     .collection .collection__2 {
         border-left: 2px solid black;
         margin-left: 20px;
     }
+
     .collection .collection__1__selections h1 {
         font-size: 4vw;
     }
@@ -661,17 +787,19 @@ footer .footer__contents .social-media-icons i {
         font-size: 2vw;
         margin-bottom: 0px;
     }
+
     /* media query Contact */
+
     .contact__form h2 {
         font-size: 4vw;
     }
+
     .contact__form label {
         font-size: 12px;
     }
-    .contact__form button { 
+
+    .contact__form button {
         font-size: 12px;
     }
 
 }
-
-
