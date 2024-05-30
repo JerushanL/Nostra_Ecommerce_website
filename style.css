@@ -218,16 +218,24 @@ body {
 .arrivals__container {
     display: flex;
     justify-content: space-between;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 2%;
 }
-
+.arrivals__container::-webkit-scrollbar {
+    display: none;
+}
 .arrivals__container .images {
     position: relative;
-    width: 20vw;
+    width: 100%;
 }
 
 .arrivals__container .images img {
-    width: 100%;
+    width: 20vw;
+    height: 20vw;
     border-radius: 10px;
+    position: relative;
 }
 
 .arrivals__container button {
@@ -268,15 +276,24 @@ body {
     display: flex;
     gap: 2%;
     justify-content: space-between;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+#most-wanted .image__container::-webkit-scrollbar {
+    display: none;
 }
 
 #most-wanted .image__container .image__boxes {
-    width: 25%;
+    width: 100%;
     position: relative;
+
 }
 
 .image__container .image__boxes img {
-    width: 100%;
+    width: 20vw;
+    height: 20vw;
     border-radius: 10px;
     position: relative;
 }
@@ -535,271 +552,286 @@ footer .footer__contents .social-media-icons i {
     .service__boxes .box {
         width: 48%;
     }
-
 }
 
-@media only screen and (max-width: 770px) {
-    .navbar .navbar__lists {
-        display: none;
-    }
+    @media only screen and (max-width: 770px) {
+        .navbar .navbar__lists {
+            display: none;
+        }
 
-    /* navbar 2 */
-    .sidenav{
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        width: 40%;
-        background-color: rgb(29, 35, 44);
-        top: 0;
-        left:  -40%;
-        z-index: 12;
-        height: 100vh;
-        transition: all 1s;
-    }
-    .sidenav ul {
-        margin-top: 50px;
-        position: relative;
-    }
-    .sidenav ul li {
-        list-style: none;
-        padding: 20px;
-    }
-    .sidenav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-    }
-    .sidenav i {
-        margin-left: 10%;
-        cursor: pointer;
-        color: white;
-        position: absolute;
-        right: 40px;
-        top: 40px;
-        margin-top: 10px;
-        padding-bottom: 20px;
-        font-size: 20px;
-    }
-    .sidenav li a:hover {
-        text-decoration: underline;
-    }
+        /* navbar 2 */
+        .sidenav {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            width: 40%;
+            background-color: rgb(29, 35, 44);
+            top: 0;
+            left: -40%;
+            z-index: 12;
+            height: 100vh;
+            transition: all 1s;
+        }
 
-    .navbar i {
-        display: block;
-        
-    }
+        .sidenav ul {
+            margin-top: 50px;
+            position: relative;
+        }
 
-    .navbar h2 {
-        font-size: 35px;
-    }
+        .sidenav ul li {
+            list-style: none;
+            padding: 20px;
+        }
 
-    .slider .content button {
-        font-size: 16px;
-        padding: 6px 10px;
-    }
+        .sidenav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
-    .slider .content h5 {
-        font-size: 2.5vw;
-    }
- 
-    .brand__img img {
-        width: 45px;
-    }
-    .brand__images p {
-        font-size: 20px;
-    }
-    .service__description {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .service__description h1 {
-        font-size: 3.5vw;
-    
-    }
-    
-    .service__description p {
-        font-size: 2.2vw;
-    }
-  
+        .sidenav i {
+            margin-left: 10%;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            right: 40px;
+            top: 40px;
+            margin-top: 10px;
+            padding-bottom: 20px;
+            font-size: 20px;
+        }
 
-    .service__boxes .box h4 {
-        font-size: 20px;
-    }
+        .sidenav li a:hover {
+            text-decoration: underline;
+        }
 
-    .service__boxes .box p {
-        font-size: 15px;
-    }
+        .navbar i {
+            display: block;
 
-    .service__boxes .box i {
-        font-size: 24px;
-    }
+        }
 
-    /* bottom banner */
-    .bottom-banner .bottom-banner__content {
-        gap: 10px;
-    }
+        .navbar h2 {
+            font-size: 35px;
+        }
 
-    .bottom-banner__content .offer__content button {
-        padding: 10px 15px;
-    }
+        .slider .content button {
+            font-size: 16px;
+            padding: 6px 10px;
+        }
 
-    .bottom-banner__content img {
-        width: 60%;
-    }
+        .slider .content h5 {
+            font-size: 2.5vw;
+        }
 
-    /* collection media queries */
-    .collection {
-        gap: 10px;
-    }
+        .brand__img img {
+            width: 45px;
+        }
 
-    .collection .shirt__images-1,
-    .collection .shirt__images-2,
-    .collection .shirt__images-3 {
-        gap: 20px;
+        .brand__images p {
+            font-size: 20px;
+        }
 
-    }
+        .service__description {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .collection .collection__2 p {
-        font-size: 1.8vw;
-    }
-}
+        .service__description h1 {
+            font-size: 3.5vw;
 
-/* mobile */
-@media only screen and (max-width: 480px) {
-    .offer p,
-    .offer i {
-        font-size: 10px;
-    }
-    .sidenav ul li a {
-        font-size: 16px;
-    }
-    .slider .content button {
-        font-size: 12px;
-        padding: 6px 5px;
-        margin-top: 10px;
-    }
+        }
 
-    .brand {
-        margin-top: -30px;
-        margin-bottom: -30px;
-    }
-
-    .brand__img img {
-        width: 7vw;
-        margin-left: 1vw;
-    }
-
-    .brand__img p {
-        font-size: 3vw;
-    }
-
-    .service__description h1 {
-        font-size: 3.8vw;
-    }
-    .service__description p {
-        font-size: 2.6vw;
-    }
-
-    .service__boxes .box h4 {
-        font-size: 12px;
-    }
-
-    .service__boxes .box p {
-        font-size: 10px;
-    }
-
-    .service__boxes .box i {
-        font-size: 16px;
-    }
-    .arrivals__container button {
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        font-size: 1.8vw;
-        border: 1px solid transparent;
-        border-radius: 5px;
- 
-    }
-    .image__container .image__boxes i {
-        position: absolute;
-        bottom: 15px;
-        right: 20px;
-        font-size: 3vw;
-    }
-
-    .bottom-banner .bottom-banner__content {
-        padding: 10px 15px;
-    }
-
-    .bottom-banner__content .offer__content button {
-        padding: 5px 10px;
-        font-size: 8px;
-        border-radius: 5px;
-    }
-
-    .newsletter {
-        margin: -20px 0px;
-    }
-    .newsletter__content button {
-        font-size: 15px;
-    }
-    footer .footer__contents h2 {
-        font-size: 5vw;
-        padding-bottom: 5px;
-    }
-    footer .footer__contents p {
-        font-size: 2.2vw;
-        padding-bottom: 10px;
-    }
+        .service__description p {
+            font-size: 2.2vw;
+        }
 
 
+        .service__boxes .box h4 {
+            font-size: 20px;
+        }
 
-    /* collection section 2  */
-    .collection .collection__2 {
-        border-left: 2px solid black;
-        margin-left: 20px;
+        .service__boxes .box p {
+            font-size: 15px;
+        }
+
+        .service__boxes .box i {
+            font-size: 24px;
+        }
+
+        /* bottom banner */
+        .bottom-banner .bottom-banner__content {
+            gap: 10px;
+        }
+
+        .bottom-banner__content .offer__content button {
+            padding: 10px 15px;
+        }
+
+        .bottom-banner__content img {
+            width: 60%;
+        }
+
+        /* collection media queries */
+        .collection {
+            gap: 10px;
+        }
+
+        .collection .shirt__images-1,
+        .collection .shirt__images-2,
+        .collection .shirt__images-3 {
+            gap: 20px;
+
+        }
+
+        .collection .collection__2 p {
+            font-size: 1.8vw;
+        }
     }
 
-    .collection .collection__1__selections h1 {
-        font-size: 4vw;
+    /* mobile */
+    @media only screen and (max-width: 480px) {
+
+        .offer p,
+        .offer i {
+            font-size: 10px;
+        }
+
+        .sidenav ul li a {
+            font-size: 16px;
+        }
+
+        .slider .content button {
+            font-size: 12px;
+            padding: 6px 5px;
+            margin-top: 10px;
+        }
+
+        .brand {
+            margin-top: -30px;
+            margin-bottom: -30px;
+        }
+
+        .brand__img img {
+            width: 7vw;
+            margin-left: 1vw;
+        }
+
+        .brand__img p {
+            font-size: 3vw;
+        }
+
+        .service__description h1 {
+            font-size: 3.8vw;
+        }
+
+        .service__description p {
+            font-size: 2.6vw;
+        }
+
+        .service__boxes .box h4 {
+            font-size: 12px;
+        }
+
+        .service__boxes .box p {
+            font-size: 10px;
+        }
+
+        .service__boxes .box i {
+            font-size: 16px;
+        }
+
+        .arrivals__container button {
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            font-size: 1.8vw;
+            border: 1px solid transparent;
+            border-radius: 5px;
+
+        }
+
+        .image__container .image__boxes i {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 3vw;
+        }
+
+        .bottom-banner .bottom-banner__content {
+            padding: 10px 15px;
+        }
+
+        .bottom-banner__content .offer__content button {
+            padding: 5px 10px;
+            font-size: 8px;
+            border-radius: 5px;
+        }
+
+        .newsletter {
+            margin: -20px 0px;
+        }
+
+        .newsletter__content button {
+            font-size: 15px;
+        }
+
+        footer .footer__contents h2 {
+            font-size: 5vw;
+            padding-bottom: 5px;
+        }
+
+        footer .footer__contents p {
+            font-size: 2.2vw;
+            padding-bottom: 10px;
+        }
+
+
+
+        /* collection section 2  */
+        .collection .collection__2 {
+            border-left: 2px solid black;
+            margin-left: 20px;
+        }
+
+        .collection .collection__1__selections h1 {
+            font-size: 4vw;
+        }
+
+        .collection .collection__1__selections .selection-1,
+        .collection .collection__1__selections .selection-2,
+        .collection .collection__1__selections .selection-3 {
+            font-size: 2.5vw;
+            padding-bottom: 30px;
+        }
+
+        .collection .shirt__images-1,
+        .collection .shirt__images-2,
+        .collection .shirt__images-3 {
+            gap: 10px;
+        }
+
+        .collection .collection__2 h2 {
+            margin-top: 0px;
+        }
+
+        .collection .collection__2 p {
+            font-size: 2vw;
+            margin-bottom: 0px;
+        }
+
+        /* media query Contact */
+
+        .contact__form h2 {
+            font-size: 4vw;
+        }
+
+        .contact__form label {
+            font-size: 12px;
+        }
+
+        .contact__form button {
+            font-size: 12px;
+        }
+
     }
-
-    .collection .collection__1__selections .selection-1,
-    .collection .collection__1__selections .selection-2,
-    .collection .collection__1__selections .selection-3 {
-        font-size: 2.5vw;
-        padding-bottom: 30px;
-    }
-
-    .collection .shirt__images-1,
-    .collection .shirt__images-2,
-    .collection .shirt__images-3 {
-        gap: 10px;
-    }
-
-    .collection .collection__2 h2 {
-        margin-top: 0px;
-    }
-
-    .collection .collection__2 p {
-        font-size: 2vw;
-        margin-bottom: 0px;
-    }
-
-    /* media query Contact */
-
-    .contact__form h2 {
-        font-size: 4vw;
-    }
-
-    .contact__form label {
-        font-size: 12px;
-    }
-
-    .contact__form button {
-        font-size: 12px;
-    }
-
-}
