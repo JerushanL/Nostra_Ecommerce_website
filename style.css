@@ -389,6 +389,7 @@ body {
     padding: 1vw 2vw;
     font-size: 22px;
     border-radius: 200px;
+    color: white;
 }
 
 /* footer */
@@ -657,6 +658,16 @@ footer .footer__contents .social-media-icons i {
         .service__boxes .box i {
             font-size: 24px;
         }
+        .arrivals__container .images img {
+            width: 25vw;
+            height: 25vw;
+ 
+        }
+        .image__container .image__boxes img {
+            width:  25vw;
+            height: 25vw;
+    
+        }
 
         /* bottom banner */
         .bottom-banner .bottom-banner__content {
@@ -757,16 +768,27 @@ footer .footer__contents .social-media-icons i {
             right: 20px;
             font-size: 3vw;
         }
+        .arrivals__container .images img {
+            width: 28vw;
+            height: 28vw;
+ 
+        }
+        .image__container .image__boxes img {
+            width:  28vw;
+            height: 28vw;
+    
+        }
 
         .bottom-banner .bottom-banner__content {
             padding: 10px 15px;
         }
 
         .bottom-banner__content .offer__content button {
-            padding: 5px 10px;
+            padding: 5px 5px;
             font-size: 8px;
-            border-radius: 5px;
+            border-radius: 2px;
         }
+  
 
         .newsletter {
             margin: -20px 0px;
@@ -785,6 +807,7 @@ footer .footer__contents .social-media-icons i {
             font-size: 2.2vw;
             padding-bottom: 10px;
         }
+   
 
 
 
